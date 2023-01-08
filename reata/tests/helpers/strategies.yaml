@@ -1,0 +1,39 @@
+sql_types:
+  integer:
+    - INTEGER
+    - INTEGER AUTO_INCREMENT
+    - INTEGER(16) NOT NULL
+    - INTEGER(16) UNSIGNED NOT NULL
+    - INTEGER(16) UNSIGNED NOT NULL AUTO_INCREMENT
+  float:
+    - FLOAT
+    - FLOAT(16, 2)
+    - FLOAT(16, 2) DEFAULT 3.14
+    - FLOAT(16, 2) NOT NULL
+    - FLOAT(16, 2) UNSIGNED
+    - FLOAT(16, 2) UNSIGNED NOT NULL
+  decimal:
+    - DECIMAL
+    - DECIMAL(16, 6)
+    - DECIMAL(16, 6) DEFAULT 2.718281
+    - DECIMAL(16, 6) NOT NULL
+    - DECIMAL(16, 6) UNSIGNED
+    - DECIMAL(16, 6) UNSIGNED NOT NULL
+  char:
+    - CHAR(8)
+    - CHAR(8) NOT NULL
+    - CHAR(8) DEFAULT 'NYSE1999'
+    - CHAR(8) DEFAULT NULL
+  varchar:
+    - VARCHAR(16)
+    - VARCHAR(16) NOT NULL
+    - VARCHAR(16) DEFAULT 'wallstreetpie'
+    - VARCHAR(16) DEFAULT NULL
+table_names:
+  - customers
+  - vendors
+  - invoices
+  - income
+  - balance_sheets
+  - cash_flow
+  - HR_records

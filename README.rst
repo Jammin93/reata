@@ -35,7 +35,7 @@ Installation
 
 Documentation
 -------------
-Up-to-date documentation can be found here: `<https://jammin93.gihub.io/reata/>`_
+Up-to-date documentation can be found here: `<https://jammin93.github.io/reata/>`_
 
 Usage
 -----

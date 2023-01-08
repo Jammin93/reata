@@ -15,7 +15,7 @@ setup(
     install_requires=[
         "numpy>=1.22.3",
         "pandas>=1.4.2",
-        "pdxtra @ git+https://git@github.com/Jammin93/pdxtra@main#egg=pdxtra",
+        "pdxtra>=1.0.0",
     ],
     python_requires=">=3.10.4",
     license=(src/"LICENSE").read_text(),

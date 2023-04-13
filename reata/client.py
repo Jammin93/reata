@@ -415,7 +415,7 @@ class MySQLClient:
             limit: Optional[int] = sys.maxsize,
             decimal_to_float: bool = False,
             map_records: bool = False,
-            ) -> Union[list, dict]:
+            ) -> list:
         """
         Returns a ``tuple`` of rows from the table. Provides the option to
         offset the selection window, filter the results, sort by column,

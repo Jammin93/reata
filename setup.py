@@ -16,6 +16,7 @@ setup(
         "numpy>=1.22.3",
         "pandas>=1.4.2",
         "pdxtra>=1.0.0",
+        "mysql-connector-python>=8.0.31",
     ],
     python_requires=">=3.10.4",
     license=(src/"LICENSE").read_text(),

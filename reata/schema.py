@@ -1,6 +1,6 @@
 """
-Module for table schema objects which are used to define table schemas for
-MySQL.
+Module for table schema and column data type objects which are used to define
+table schemas for MySQL.
 """
 from __future__ import annotations
 
@@ -90,12 +90,12 @@ class TableSchema:
         self.columns = self.Columns(self.columns)
         self.primary_key = self.PrimaryKey(self.primary_key)
 
-    def __str__(self):
+    def __str__(self) -> str:
         # Convoluted means of computing the spacing between a key and its
         # value, in order to generate a string where each new line contains a
         # key-value pair aligned to a vertical margin.
         max_key_len = len(max(self.columns.keys(), key=len))
         return f"{self.name}\n" + "\n".join([
-            k + " " * (4 + max_key_len - len(k)) + v
+            k + " " * (4 + max_key_len - len(k)) + str(v)
             for k, v in self.columns.items()
         ])

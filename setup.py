@@ -5,7 +5,7 @@ src = Path(__file__).parent
 
 setup(
     name="reata",
-    version="1.1.0",
+    version="1.1.1",
     description=(
         "A simple MySQL DBAPI wrapper for simplifying "
         "data processing pipelines."

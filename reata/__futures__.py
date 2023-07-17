@@ -253,13 +253,3 @@ class TIMESTAMP(BaseDataType):
 
     def __init__(self, *args, **kwargs) -> None:
         super().__init__(*args, **kwargs)
-
-
-
-
-
-if __name__ == "__main__":
-    # x = DECIMAL(10, 2, "NOT NULL")
-    # print(x)
-    # print(x.effective_size)
-    pass

@@ -57,7 +57,7 @@ class StringType(BaseDataType):
         self.attrs = attrs
 
     def __str__(self) -> str:
-        if self.size is not None:
+        if self.size is None:
             return f"{self.dtype} {self.attrs}"
         else:
             return f"{self.dtype}({self.size}) {self.attrs}"

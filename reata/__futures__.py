@@ -48,6 +48,18 @@ class BaseDataType:
         return str(self)
 
 
+class CharType(BaseDataType):
+    """Base class for all character types."""
+
+    def __init__(self, size: int, attrs: str = "") -> None:
+        super().__init__(attrs)
+        self.size = size
+        self.attrs = attrs
+
+    def __str__(self) -> str:
+        return f"{self.dtype}({self.size}) {self.attrs}"
+
+
 class StringType(BaseDataType):
     """Base class for all string types."""
 
@@ -111,13 +123,25 @@ class TimeType(BaseDataType):
             return f"{self.dtype} {self.attrs}"
 
 
-class CHAR(StringType):
+class CHAR(CharType):
 
     def __init__(self, *args, **kwargs) -> None:
         super().__init__(*args, **kwargs)
 
 
-class VARCHAR(StringType):
+class VARCHAR(CharType):
+
+    def __init__(self, *args, **kwargs) -> None:
+        super().__init__(*args, **kwargs)
+
+
+class BINARY(CharType):
+
+    def __init__(self, *args, **kwargs) -> None:
+        super().__init__(*args, **kwargs)
+
+
+class VARBINARY(CharType):
 
     def __init__(self, *args, **kwargs) -> None:
         super().__init__(*args, **kwargs)
@@ -142,18 +166,6 @@ class MEDIUMTEXT(StringType):
 
 
 class LONGTEXT(StringType):
-
-    def __init__(self, *args, **kwargs) -> None:
-        super().__init__(*args, **kwargs)
-
-
-class BINARY(StringType):
-
-    def __init__(self, *args, **kwargs) -> None:
-        super().__init__(*args, **kwargs)
-
-
-class VARBINARY(StringType):
 
     def __init__(self, *args, **kwargs) -> None:
         super().__init__(*args, **kwargs)

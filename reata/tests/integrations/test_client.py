@@ -195,7 +195,7 @@ class TestMySQLClient:
             TEST_TABLE.name,
             ["name", "age"],
             TEST_DATA,
-            update_duplicates=False,
+            update_method=None,
         )
         rows = tuple(client.fetch_rows(TEST_TABLE.name, ("name", "age")))
         assert rows == TEST_DATA

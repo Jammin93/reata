@@ -59,6 +59,10 @@ class CharType(BaseDataType):
     def __str__(self) -> str:
         return f"{self.dtype}({self.size}) {self.attrs}"
 
+    @property
+    def effective_size(self) -> int:
+        return self.size
+
 
 class StringType(BaseDataType):
     """Base class for all string types."""
@@ -73,6 +77,10 @@ class StringType(BaseDataType):
             return f"{self.dtype} {self.attrs}"
         else:
             return f"{self.dtype}({self.size}) {self.attrs}"
+
+    @property
+    def effective_size(self) -> int:
+        return self.size
 
 
 class DecimalType(BaseDataType):
@@ -107,6 +115,10 @@ class IntegerType(BaseDataType):
 
     def __str__(self) -> str:
         return f"{self.dtype}({self.size}) {self.attrs}"
+
+    @property
+    def effective_size(self) -> int:
+        return self.size
 
 
 class TimeType(BaseDataType):
